@@ -13,11 +13,16 @@
         <h4>Wszelkie prawa zastrzezone</h4>
     </div>
     
+    
+    {% for post in posts %}
     <div>
-        {{ posts }}
+        <p>opublikowany: {{ post.published_date }}</p>
+        <h2><a href="">{{  post.title }}</a></h2>
+        <em>{{ post.text|linebreakbr }}</em>
     </div>
+    {% endfor %}
     <div>
-       
+     
     </div>
 </body>
 </html>
